@@ -38,6 +38,7 @@ function Catalog() {
           </li>
         ))}
       </ul>
+      <Link to="/">Back to Home</Link> {/* Dodan link za povratak na Home */}
     </div>
   );
 }
