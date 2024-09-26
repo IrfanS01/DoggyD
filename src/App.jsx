@@ -1,23 +1,21 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './Home.jsx';
-import Catalog from './Catalog.jsx';
-import DogDetails from './DogDetails.jsx';
-
-
+import { Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import Catalog from './Catalog';
+import DogDetails from './DogDetails';
+import Navbar from './Navbar'; // Importovanje Navbar-a
 
 function App() {
   return (
-    <Router>
-      <div>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/catalog" element={<Catalog />} />
-          <Route path="/dog/:id" element={<DogDetails />} />
-        </Routes>
-      </div>
-    </Router>
+    <>
+      <Navbar /> {/* Navigaciona traka će biti prikazana na svim stranicama */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/catalog" element={<Catalog />} />
+        <Route path="/dogs/:id" element={<DogDetails />} />
+      </Routes>
+    </>
   );
 }
 
 export default App;
+

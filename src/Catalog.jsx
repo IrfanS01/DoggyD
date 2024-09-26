@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 function Catalog() {
   const [dogs, setDogs] = useState([]);
-  const [loading, setLoading] = useState(true); // Add loading state
-  const [error, setError] = useState(null); // Add error state
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch('https://api.jsonbin.io/v3/b/66ea6857e41b4d34e4325758')
@@ -12,11 +12,11 @@ function Catalog() {
       .then(data => {
         console.log(data.record);
         setDogs(data.record);
-        setLoading(false); // Stop loading once data is fetched
+        setLoading(false);
       })
       .catch((err) => {
         setError('Failed to load dogs data');
-        setLoading(false); // Stop loading in case of error
+        setLoading(false);
       });
   }, []);
 
@@ -32,13 +32,13 @@ function Catalog() {
     <div>
       <h1>Our Dogs</h1>
       <ul>
-  {dogs.map(dog => (
-    <li key={dog.id || dog.name}>  {/* Adding a fallback to ensure a unique key */}
-      <Link to={`/dog/${dog.id}`}>{dog.name}</Link>
-    </li>
-  ))}
-</ul>
-
+        {dogs.map(dog => (
+          <li key={dog.name}>
+            <Link to={`/dogs/${dog.name}`}>{dog.name}</Link>
+          </li>
+        ))}
+      </ul>
+      <Link to="/">Back to Home</Link> {/* Dodan link za povratak na Home */}
     </div>
   );
 }
