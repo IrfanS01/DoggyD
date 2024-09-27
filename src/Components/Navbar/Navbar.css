@@ -1,0 +1,37 @@
+/* Navbar.css */
+
+/* Cijela navigacija */
+.navbar {
+    position: absolute; /* Pozicionira navbar preko pozadinske slike */
+    top: 20px; /* Neće biti zalijepljen za vrh stranice */
+    left: 50%;
+    transform: translateX(-50%); /* Centriramo navigaciju */
+    z-index: 10; /* Osigurava da je iznad pozadinske slike */
+    background-color: rgba(0, 0, 0, 0.6); /* Poluprozirna crna pozadina */
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  /* Stilizacija liste */
+  .nav-list {
+    list-style-type: none; /* Uklanja oznake sa liste */
+    display: flex; /* Horizontalan prikaz */
+    gap: 20px; /* Razmak između linkova */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Stilizacija linkova */
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover efekat */
+  }
+  
