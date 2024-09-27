@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from './Home';
-import Catalog from './Catalog';
-import DogDetails from './DogDetails';
-import Navbar from './Navbar'; // Importovanje Navbar-a
+import Home from './Components/Home/Home';
+import Catalog from './Components/Catalog/Catalog';
+import DogDetails from './Components/DogDetails/DogDetails';
+import Navbar from './Components/Navbar/Navbar'; // Importovanje Navbar-a
 
 function App() {
   return (
