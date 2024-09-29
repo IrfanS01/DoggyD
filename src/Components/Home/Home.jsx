@@ -39,7 +39,7 @@ function Home() {
         </div>
         <div className="testimonial">
           <p>"Fantastic grooming services, my dog looks amazing!"</p>
-          <span>- Samke Serifovic</span>
+          <span>- Oskar Nilsson</span>
         </div>
       </section>
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import './DogDetails.jsx';
+import './DogDetails.css'; // Ispravan naziv CSS-a
 
 function DogDetails() {
   const { id } = useParams();
@@ -35,22 +35,21 @@ function DogDetails() {
   }
 
   return (
-    <div>
-      <h1>{dog.name}</h1>
-      <p>Breed: {dog.breed}</p>
-      <p>Sex: {dog.sex}</p>
-      <img src={dog.img} alt={dog.name} />
+    <div className="dog-details-container">
+      <div className="dog-details-card">
+        <img src={dog.img} alt={dog.name} className="dog-image" />
+        <h1>{dog.name}</h1>
+        <p><strong>Breed:</strong> {dog.breed}</p>
+        <p><strong>Sex:</strong> {dog.sex}</p>
+        {dog.age && <p><strong>Age:</strong> {dog.age} years</p>}
+        {dog.chipNumber && <p><strong>Chip Number:</strong> {dog.chipNumber}</p>}
+      </div>
 
-      {/* Dodatne informacije */}
-      {dog.age && <p>Age: {dog.age}</p>}
-      {dog.chipNumber && <p>Chip Number: {dog.chipNumber}</p>}
-      
-      {/* Informacije o vlasniku */}
       {dog.owner && (
-        <div>
+        <div className="owner-details-card">
           <h3>Owner Information</h3>
-          <p>Owner's Name: {dog.owner.name} {dog.owner.lastName}</p>
-          <p>Phone Number: {dog.owner.phoneNumber}</p>
+          <p><strong>Name:</strong> {dog.owner.name} {dog.owner.lastName}</p>
+          <p><strong>Phone Number:</strong> {dog.owner.phoneNumber}</p>
         </div>
       )}
     </div>

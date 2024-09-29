@@ -1,0 +1,139 @@
+/* Container for the whole page */
+.catalog-container {
+    background-image: url('/images/my-background.jpg'); /* Koristi istu sliku */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Stil za tekstualni dio na početku stranice */
+.intro-text {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.intro-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.intro-text p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Postavi grid layout za kartice pasa */
+.dog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Grid će imati 4 kolone */
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+/* Stil za kartice pasa */
+.dog-card {
+    background-color: rgba(255, 255, 255, 0.5); /* Lagano prozirna bijela pozadina */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    backdrop-filter: blur(5px); /* Blagi blur za pozadinsku sliku */
+}
+
+/* Efekt hover za kartice */
+.dog-card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Dublja sjena na hover */
+    transform: translateY(-10px); /* Kartica se malo podigne */
+}
+
+/* Stil za sliku unutar kartice */
+.dog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0; /* Zaobljeni rubovi na vrhu slike */
+}
+
+/* Stil za ime i tekst unutar kartice */
+.dog-card h2, .dog-card p {
+    padding: 0.5rem;
+    margin: 0;
+    color: #333;
+    border-radius: 0 0 10px 10px; /* Zaobljeni rubovi na dnu kartice */
+}
+
+/* Posebna stilizacija za h2 (naslov) */
+.dog-card h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Posebna stilizacija za p (opis) */
+.dog-card p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Stil za dugme "View More" */
+.view-more-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: rgb(95, 95, 242); /* Svijetlo plava boja */
+    color: white;
+    text-decoration: none;
+    border-radius: 20px; /* Zaobljeni rubovi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover efekt za dugme */
+.view-more-button:hover {
+    background-color: hsl(16, 53%, 51%); /* Tamnija boja na hover */
+    transform: scale(1.05); /* Blago povećanje */
+}
+
+/* Stil za input polje pretrage */
+.search-input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 1rem;
+}
+
+/* Stil za dropdown meni */
+.breed-select {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .dog-grid {
+        grid-template-columns: repeat(2, 1fr); /* Dvije kolone umjesto četiri na manjim ekranima */
+    }
+}
+
+@media (max-width: 480px) {
+    .dog-grid {
+        grid-template-columns: 1fr; /* Jedna kolona na vrlo malim ekranima */
+    }
+}
+
+/* Popravljena verzija za .intro-text i .dog-card */
+.intro-text, .dog-card {
+    background-color: rgba(255, 255, 255, 0.5); /* Blago prozirna bijela pozadina */
+    border-radius: 10px;
+    padding: 1rem;
+}
