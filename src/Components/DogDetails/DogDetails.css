@@ -1,0 +1,65 @@
+/* Generalni stilovi za stranicu */
+.dog-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f7f7f7; /* Lagano siva pozadina */
+  }
+  
+  /* Kartica za detalje psa */
+  .dog-details-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  /* Stil za sliku psa */
+  .dog-image {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Kartica za informacije o vlasniku */
+  .owner-details-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+  }
+  
+  /* Stil za naslove */
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Stil za tekstualne informacije */
+  p {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0.5rem 0;
+  }
+  
+  /* Stil za jače naglašeni tekst */
+  strong {
+    font-weight: bold;
+  }
+  
