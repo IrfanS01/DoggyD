@@ -1,46 +1,166 @@
-/* Home.css */
+/* Generalni stilovi */
+body, html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
 .home-container {
-  background-image: url('/images/my-background.jpg'); /* Slika se sada nalazi u public folderu */
+  background-image: url('/images/my-background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh; /* Visina na 100% ekrana */
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: flex-end; /* Sadržaj je pri dnu */
-  text-align: center;
-  overflow: hidden; /* Sprječava pomicanje */
-  position: relative;
-  padding-bottom: 2rem; /* Razmak na dnu */
+  flex-direction: column;
+  justify-content: flex-start; /* Premješta sadržaj na vrh */
+  align-items: center;
+  padding: 2rem;
 }
 
 /* Stilizacija glavnog sadržaja */
 .home-content {
-  background-color: rgba(255, 255, 255, 0.6); /* Smanjili smo izraženost pozadine */
-  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.3); /* Blago prozirna pozadina */
+  padding: 1rem; /* Smanjen padding */
   border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  margin-bottom: 5rem; /* Manji razmak između sekcija */
 }
 
 .home-title {
-  font-size: 3rem;
+  font-size: rem; /* Smanji font veličinu */
   color: #333;
 }
 
 .home-description {
-  font-size: 1.5rem;
+  font-size: 1rem; /* Smanji font veličinu */
   color: #555;
 }
 
 .home-button {
-  font-size: 1.25rem;
+  font-size: 1rem; /* Smanjen font */
   color: white;
   background-color: #007bff;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1rem; /* Smanji padding */
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s;
 }
 
-.home-button:hover {
-  background-color: #0056b3;
+.service-item:hover, .testimonial:hover {
+  transform: scale(1.05); /* Blago povećanje na hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Izraženija sjena */
+}
+
+
+/* Sekcija s uslugama */
+.services-section {
+  padding: 2 rem;
+  background-color: rgba(255, 255, 255, 0.1); /* Blago prozirna pozadina */
+  backdrop-filter: blur(5px); /* Blur efekat pozadine */
+  border-radius: 15px; /* Zaobljeni uglovi */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Dodana sjena za dubinu */
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 9rem;
+  text-align: center;
+}
+
+.services-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  background-color: rgba(255, 255, 255, 0.5); /* Blago prozirna pozadina */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0.1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Manja sjena unutar kartica */
+  width: 28%; /* Kartice su sada malo uže */
+  min-width: 180px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animacija za hover */
+}
+
+.service-item h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.service-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Sekcija Testimonijali */
+.testimonials-section {
+  padding: 0.0rem; /* Smanjen padding */
+  background-color: rgba(255, 255, 255, 0.3); /* Povećana providnost */
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Lagana sjena za izdvajanje */
+  width: 75%;
+  max-width: 500px; /* Smanjen maksimalni širinski limit */
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 1.2rem; /* Smanjen font naslova sekcije */
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.testimonial {
+  background-color: rgba(255, 255, 255, 0.7); /* Poluprozirna pozadina */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0.0rem; /* Smanjen padding unutar svakog testimoniala */
+  border-radius: 8px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  width: 100%; /* Smanjena širina svakog testimoniala */
+  max-width: 600px; /* Maksimalna širina za veću responzivnost */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.testimonial p {
+  font-size: 0.8rem; /* Smanjen font za tekst testimoniala */
+  color: #555;
+  font-style: italic;
+  
+}
+
+.testimonial span {
+  display: block;
+  font-size: 0.9rem; /* Smanjen font za ime klijenta */
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Dugme za kontakt */
+.contact-section {
+  margin-top: 1rem; /* Manji razmak gore */
+}
+
+.contact-button {
+  font-size: 1rem; /* Smanjen font */
+  color: white;
+  background-color: #28a745;
+  padding: 0.5rem 1rem; /* Smanjen padding */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #218838;
 }
