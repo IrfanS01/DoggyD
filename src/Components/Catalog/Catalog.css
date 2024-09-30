@@ -27,10 +27,23 @@
 /* Postavi grid layout za kartice pasa */
 .dog-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Grid će imati 4 kolone */
+    grid-template-columns: repeat(4, 1fr); /* Grid za 4 kolone */
     gap: 20px;
     margin-top: 2rem;
-}
+  }
+  
+  /* Media queries za mobilne uređaje */
+  @media (max-width: 768px) {
+    .dog-grid {
+      grid-template-columns: repeat(2, 1fr); /* Grid za 2 kolone na manjim ekranima */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .dog-grid {
+      grid-template-columns: 1fr; /* Grid za 1 kolonu na vrlo malim ekranima */
+    }
+  }
 
 /* Stil za kartice pasa */
 .dog-card {

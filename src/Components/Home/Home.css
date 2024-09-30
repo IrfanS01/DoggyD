@@ -13,7 +13,7 @@ body, html {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Premješta sadržaj na vrh */
+  justify-content: center; /* Premješta sadržaj na vrh */
   align-items: center;
   padding: 2rem;
 }
@@ -24,7 +24,8 @@ body, html {
   padding: 1rem; /* Smanjen padding */
   border-radius: 10px;
   width: 80%;
-  max-width: 500px;
+  max-width: 600px;
+  text-align: center;
   margin-bottom: 5rem; /* Manji razmak između sekcija */
 }
 
@@ -163,4 +164,48 @@ body, html {
 
 .contact-button:hover {
   background-color: #218838;
+}
+/* Media queries za mobilne uređaje */
+@media (max-width: 768px) {
+  .home-content {
+    width: 90%; /* Prilagodi širinu za mobilne uređaje */
+  }
+
+  .services-list {
+    flex-direction: column; /* Prikaz usluga u jednom stupcu na manjim ekranima */
+  }
+
+  .service-item {
+    width: 100%; /* Povećaj širinu svake usluge za mobilne uređaje */
+  }
+
+  .testimonials-section {
+    width: 90%; /* Prilagodi širinu testimonial sekcije */
+  }
+}
+
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 1.5rem; /* Smanji font veličinu na najmanjim ekranima */
+  }
+
+  .home-description {
+    font-size: 1rem;
+  }
+
+  .service-item h3 {
+    font-size: 1.5rem; /* Smanji font veličinu za usluge na najmanjim ekranima */
+  }
+
+  .testimonial p {
+    font-size: 0.8rem;
+  }
+
+  .testimonial span {
+    font-size: 0.9rem;
+  }
+
+  .contact-button {
+    padding: 0.5rem 1rem; /* Prilagodi veličinu dugmeta na najmanjim ekranima */
+  }
 }
