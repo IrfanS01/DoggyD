@@ -1,65 +1,85 @@
 /* Generalni stilovi za stranicu */
 .dog-details-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    background-color: #f7f7f7; /* Lagano siva pozadina */
-  }
-  
-  /* Kartica za detalje psa */
-  .dog-details-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    max-width: 600px;
-    width: 100%;
-  }
-  
-  /* Stil za sliku psa */
-  .dog-image {
-    width: 100%;
-    height: auto;
-    max-width: 300px;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Kartica za informacije o vlasniku */
-  .owner-details-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    max-width: 600px;
-    width: 100%;
-    text-align: left;
-  }
-  
-  /* Stil za naslove */
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  /* Stil za tekstualne informacije */
-  p {
-    font-size: 1.2rem;
-    color: #333;
-    margin: 0.5rem 0;
-  }
-  
-  /* Stil za jače naglašeni tekst */
-  strong {
-    font-weight: bold;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-image: url('/images/my-background.jpg'); /* Pozadinska slika */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Osigurava da pozadina pokriva cijelu visinu ekrana */
+}
+
+/* Wrapper za sliku i informacije o psu */
+.dog-details-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem; /* Razmak između slike i informacija */
+  max-width: 1200px; /* Maksimalna širina */
+  width: 100%;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.6); /* Blago prozirna pozadina */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Stil za veću sliku psa */
+.dog-image-large {
+  width: 50%; /* Povećava sliku na pola širine kartice */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Stil za informacije o psu */
+.dog-info {
+  width: 50%;
+}
+
+/* Stil za naslove */
+.dog-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.dog-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Stil za tekstualne informacije */
+.dog-info p {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+/* Stil za jače naglašeni tekst */
+.dog-info strong {
+  font-weight: bold;
+}
+
+/* Stil za karticu s informacijama o vlasniku */
+.owner-details {
+  margin-top: 2rem;
+  background-color: rgba(255, 255, 255, 0.4); /* Blago prozirna pozadina */
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Stil za dugme "Back to Catalog" */
+.back-button {
+  margin-top: 2rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

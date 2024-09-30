@@ -3,7 +3,7 @@
 /* Cijela navigacija */
 .navbar {
     position: absolute; /* Pozicionira navbar preko pozadinske slike */
-    top: 20px; /* Neće biti zalijepljen za vrh stranice */
+    top: 50px; /* Neće biti zalijepljen za vrh stranice */
     left: 50%;
     transform: translateX(-50%); /* Centriramo navigaciju */
     z-index: 10; /* Osigurava da je iznad pozadinske slike */
