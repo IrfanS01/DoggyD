@@ -10,18 +10,24 @@ function Catalog() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('https://api.jsonbin.io/v3/b/66ea6857e41b4d34e4325758')
+    fetch('https://api.jsonbin.io/v3/b/67222f6de41b4d34e44b4bba')
       .then(response => response.json())
       .then(data => {
-        console.log(data.record);
-        setDogs(data.record);
+        const foundDog = data.record ? data.record.find(d => d.name === id) : null;
+        if (foundDog) {
+          setDog(foundDog);
+        } else {
+          setError('Dog not found');
+        }
         setLoading(false);
       })
-      .catch(err => {
-        setError('Failed to load dogs data');
+      .catch((err) => {
+        setError('Failed to load dog details');
         setLoading(false);
       });
-  }, []);
+  }, [id]);
+  
+  
 
   if (loading) {
     return <p>Loading...</p>;

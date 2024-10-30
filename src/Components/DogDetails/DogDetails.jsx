@@ -10,7 +10,7 @@ function DogDetails() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('https://api.jsonbin.io/v3/b/66ea6857e41b4d34e4325758')
+    fetch('https://api.jsonbin.io/v3/b/67222f6de41b4d34e44b4bba')
       .then(response => response.json())
       .then(data => {
         const foundDog = data.record.find(d => d.name === id);
